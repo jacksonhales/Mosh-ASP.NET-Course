@@ -11,25 +11,25 @@ namespace Vidly.ViewModels
     {
         public IEnumerable<Genre> Genres { get; set; }
 
-            public int? Id { get; set; }
+        public int? Id { get; set; }
 
-            [Required]
-            [StringLength(255)]
-            public string Name { get; set; }
+        [Required]
+        [StringLength(255)]
+        public string Name { get; set; }
 
-            
-            [Required]
-            [Display(Name = "Genre")]
-            public byte? GenreId { get; set; }
 
-            [Required]
-            [Display(Name = "Release Date")]
-            public DateTime? ReleaseDate { get; set; }
+        [Display(Name = "Genre")]
+        [Required]
+        public byte? GenreId { get; set; }
 
-            [Required]
-            [Range(1, 20)]
-            [Display(Name = "Number in Stock")]
-            public byte? NumberInStock { get; set; }
+        [Display(Name = "Release Date")]
+        [Required]
+        public DateTime? ReleaseDate { get; set; }
+
+        [Display(Name = "Number in Stock")]
+        [Range(1, 20)]
+        [Required]
+        public byte? NumberInStock { get; set; }
 
         public string Title
         {
